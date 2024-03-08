@@ -17,7 +17,7 @@ app.use(cors({
 app.use(express.json());
 
 mongoose.connect(
-   process.env.DB_URL
+   process.env.MONGODB_URI;
 );
 
 app.get("/", (req, res) => {
