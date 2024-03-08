@@ -16,13 +16,9 @@ mongoose.connect(
     "mongodb+srv://frostisr:cr1pt0sr@cluster0.od5flz5.mongodb.net/db_hjp?retryWrites=true&w=majority&appName=Cluster0"
 );
 
-// app.get("/getUsers", (req, res) => {
-//     UserModel.find({}).then(function(users) {
-//         res.json(users)
-//     }).catch(function(err) {
-//         res.json(err)
-//     })
-// })
+app.get("/", (req, res) => {
+   res.json("Hello");
+})
 
 app.post("/newContact", async (req, res) => {
   const {fName, lName, email, subject, message} = req.body;
