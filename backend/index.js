@@ -9,7 +9,7 @@ const app = express();
 // ["https://hjp-mern-client.vercel.app"],
 
 app.use(cors({
-  origin: true,
+  origin: "*",
   methods: ["POST", "GET"],
   credentials:true
 }));
