@@ -9,8 +9,9 @@ const app = express();
 // ["https://hjp-mern-client.vercel.app"],
 
 app.use(cors({
-  origin: true,
+  origin: "*",
   methods: ["POST", "GET"],
+  allowedHeaders: ['Content-Type', 'Authorization'],
   credentials:true
 }));
 app.use(express.json());
