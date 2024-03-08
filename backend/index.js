@@ -1,19 +1,22 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
-import UserModel from './models/Users.js'
+import UserModel from './models/Users.js';
+import env from "dotenv";
+env.config();
 
 const app = express();
+// ["https://hjp-mern-client.vercel.app"],
 
 app.use(cors({
-  origin: true,
+  origin: "https://hjp-mern-client.vercel.app",
   methods: ["POST", "GET"],
   credentials:true
 }));
 app.use(express.json());
 
 mongoose.connect(
-    "mongodb+srv://frostisr:cr1pt0sr@cluster0.od5flz5.mongodb.net/db_hjp?retryWrites=true&w=majority&appName=Cluster0"
+  process.env.DB_URL
 );
 
 app.get("/", (req, res) => {

@@ -22,7 +22,7 @@ export default function App() {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      axios.post('http://localhost:8000/newContact', {
+      axios.post('https://hjp-mern-server.vercel.app/newContact', {
           fName, lName, email, subject, message
     })
       .then(res => {
