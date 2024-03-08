@@ -9,7 +9,7 @@
    "routes": [
       {
         "source": "/(.*)",
-        "dest"L "/"
+        "dest": "/"
       }
     ]
   }
