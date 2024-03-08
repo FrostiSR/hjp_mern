@@ -16,7 +16,7 @@ app.use(cors({
 app.use(express.json());
 
 mongoose.connect(
-  process.env.DB_URL
+   "mongodb+srv://frostisr:cr1pt0sr@cluster0.od5flz5.mongodb.net/db_hjp?retryWrites=true&w=majority&appName=Cluster0"
 );
 
 app.get("/", (req, res) => {
